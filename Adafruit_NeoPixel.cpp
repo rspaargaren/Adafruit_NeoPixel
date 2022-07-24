@@ -2597,16 +2597,10 @@ if(is800KHz) {
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop;");
         // min: 450 typ: 600 max: 5,000
         GPIO_CLEAR(pin);
         asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop;");
       } else {
@@ -2616,17 +2610,11 @@ if(is800KHz) {
         asm("nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop;");
         // data low
         // min: 450 typ: 600 max: 5,000
         GPIO_CLEAR(pin);
         asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"
             "nop; nop; nop; nop; nop; nop; nop; nop;"

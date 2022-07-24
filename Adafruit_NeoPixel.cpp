@@ -2569,7 +2569,7 @@ if(is800KHz) {
   SysTick->LOAD = saveLoad; // Restore SysTick rollover to 1 ms
   SysTick->VAL = saveVal;   // Restore SysTick value
 
-#elif defined(ARDUINO_STM32_FEATHER) // FEATHER WICED (120MHz)
+#elif defined(ARDUINO_STM32_FEATHER) || defined(TARGET_STM32F1) // FEATHER WICED (120MHz)
 
   // Tried this with a timer/counter, couldn't quite get adequate
   // resolution. So yay, you get a load of goofball NOPs...

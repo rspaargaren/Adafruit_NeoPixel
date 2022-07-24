@@ -2590,38 +2590,42 @@ if(is800KHz) {
         // data ONE high
         // min: 550 typ: 700 max: 5,500
         GPIO_SET(pin);      
-        asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop;");
-        // min: 450 typ: 600 max: 5,000
+//        asm("nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop; nop; nop;"
+//            "nop; nop; nop; nop; nop; nop;");
+        time::delay_ns(550);
+	// min: 450 typ: 600 max: 5,000
         GPIO_CLEAR(pin);
-        asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop;");
+        // asm("nop; nop; nop; nop; nop; nop; nop; nop;"
+        //     "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop;");
+	time::delay_ns(450);
       } else {
         // data ZERO high
         // min: 200  typ: 350 max: 500
         GPIO_SET(pin);
-        asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop;");
-        // data low
+        //asm("nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop;");
+        time::delay_ns(200);
+	// data low
         // min: 450 typ: 600 max: 5,000
         GPIO_CLEAR(pin);
-        asm("nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop; nop; nop; nop; nop;"
-            "nop; nop; nop; nop;");
+        // asm("nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop; nop; nop; nop; nop;"
+        //    "nop; nop; nop; nop;");
+	time::delay_ns(450);
       }
       if(bitMask >>= 1) {
         // Move on to the next pixel
